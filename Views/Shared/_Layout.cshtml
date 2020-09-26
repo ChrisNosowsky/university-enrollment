@@ -8,28 +8,25 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Michigan State University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Students", "Index", "Student")</li>
-                        <li>@Html.ActionLink("Courses", "Index", "Course")</li>
-                        <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
-                        <li>@Html.ActionLink("Departments", "Index", "Department")</li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            <a class="navbar-brand" href="/">Michigan State University</a>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="nav-item">@Html.ActionLink("Students", "Index", "Student")</li>
+                    <li class="nav-item">@Html.ActionLink("Courses", "Index", "Course")</li>
+                    <li class="nav-item">@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+                    <li class="nav-item">@Html.ActionLink("Departments", "Index", "Department")</li>
+                </ul>
+
             </div>
         </div>
-    </div>
+    </nav>
+
     <div class="container">
         @RenderBody()
         <hr />
@@ -39,7 +36,6 @@
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
